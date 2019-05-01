@@ -10,6 +10,7 @@ const modeConfig = env => require(`./build-utils/webpack.${env.mode}.js`)(env);
 const loadPresets = require('./build-utils/loadPresets');
 
 const webcomponentsjs = './node_modules/@webcomponents/webcomponentsjs';
+const highlightjs = './node_modules/highlight.js/styles/';
 
 const polyfills = [
   {
@@ -34,7 +35,11 @@ const assets = [
     from: 'src/img',
     to: 'img/'
   },
-  'src/manifest.webmanifest'
+  'src/manifest.webmanifest',
+  {
+    from: resolve(`${highlightjs}/atom-one-dark.css`),
+    to: 'theme',
+  }
 ];
 
 const plugins = [

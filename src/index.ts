@@ -18,11 +18,6 @@ function initRouter() {
       component: 'home-view',
     },
     {
-      path: '/another-page',
-      component: 'another-view',
-      action: () => import(/* webpackChunckName: "stats" */ '~/views/another-view'),
-    },
-    {
       path: '(.*)',
       component: 'not-found-view',
       action: () => import(/* webpackChunckName: "not-found-view" */ '~/views/not-found-view'),

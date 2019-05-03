@@ -32,11 +32,10 @@ class ExamplesList extends BaseView {
   }
 
   fetchGists = async () => {
-    const response = await fetch('http://localhost:5000/gists');
+    const response = await fetch('/api/gists');
     const gists = await response.json();
 
     this.list = gists;
-    console.log(this.list);
   }
 }
 

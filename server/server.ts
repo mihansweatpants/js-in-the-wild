@@ -13,5 +13,5 @@ app.get('/gists', async (req, res) => {
   res.json(await fetchGists());
 });
 
-const port = process.env.SERVER_PORT;
+const port = process.env.SERVER_PORT || 5000;
 app.listen(port, () => console.log(`server started on http://localhost:${port}`));

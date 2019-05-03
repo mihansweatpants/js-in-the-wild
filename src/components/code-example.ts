@@ -18,32 +18,24 @@ const md = new MarkdownIt({
   },
 });
 
-class CodeSnippet extends BaseView {
+class CodeExample extends BaseView {
   @property({ type: String })
-  private markdown = '';
+  private markup;
 
   render() {
     return html`
       <style>
-        .code-snippet {
+        .code-example {
           margin-top: 50px;
           font-size: 1rem;
         }
       </style>
 
-      <div class="code-snippet">
-        ${unsafeHTML(md.render(this.markdown))}
+      <div class="code-example">
+        ${unsafeHTML(md.render(this.markup))}
       </div>
     `;
   }
-
-  async connectedCallback() {
-    super.connectedCallback();
-
-    // tslint:disable max-line-length
-    const gist = await fetch('https://gist.githubusercontent.com/mihansweatpants/9e5e169eb0d6b8a10173612fd78d51c3/raw/75b067c64cd18462db771b459fa18698c1fa5f7e/test-gist.md');
-    this.markdown = await gist.text();
-  }
 }
 
-customElements.define('code-snippet', CodeSnippet);
+customElements.define('code-example', CodeExample);

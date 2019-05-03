@@ -1,5 +1,5 @@
 import './styles.css';
-import './views/home-view.ts';
+import './views/examples-list';
 
 import { Router } from '@vaadin/router';
 
@@ -15,12 +15,12 @@ function initRouter() {
   router.setRoutes([
     {
       path: '/',
-      component: 'home-view',
+      component: 'examples-list',
     },
     {
       path: '(.*)',
       component: 'not-found-view',
-      action: () => import(/* webpackChunckName: "not-found-view" */ '~/views/not-found-view'),
+      action: () => import(/* webpackChunckName: "not-found-view" */ '~/views/not-found'),
     },
   ]);
 }

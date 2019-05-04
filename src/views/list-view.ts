@@ -3,7 +3,7 @@ import { BaseView } from './base-view';
 
 import '~/components/code-example';
 
-class ExamplesList extends BaseView {
+class ListView extends BaseView {
   @property({ type: Array })
   private list;
 
@@ -25,10 +25,10 @@ class ExamplesList extends BaseView {
     `;
   }
 
-  async connectedCallback() {
+  connectedCallback() {
     super.connectedCallback();
 
-    console.log(await this.fetchGists());
+    this.fetchGists();
   }
 
   fetchGists = async () => {
@@ -39,4 +39,4 @@ class ExamplesList extends BaseView {
   }
 }
 
-customElements.define('examples-list', ExamplesList);
+customElements.define('list-view', ListView);

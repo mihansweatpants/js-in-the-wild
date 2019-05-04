@@ -1,5 +1,5 @@
 import './styles.css';
-import './views/examples-list';
+import './views/list-view';
 
 import { Router } from '@vaadin/router';
 
@@ -11,16 +11,20 @@ window.addEventListener('load', () => {
 function initRouter() {
   const router = new Router(document.querySelector('main'));
 
-  // tslint:disable space-in-parens
   router.setRoutes([
     {
       path: '/',
-      component: 'examples-list',
+      component: 'list-view',
+    },
+    {
+      path: '/about',
+      component: 'about-view',
+      action: () => import('~/views/about-view'),
     },
     {
       path: '(.*)',
       component: 'not-found-view',
-      action: () => import(/* webpackChunckName: "not-found-view" */ '~/views/not-found'),
+      action: () => import('~/views/not-found-view'),
     },
   ]);
 }

@@ -84,7 +84,7 @@ module.exports = ({ mode, presets }) => {
         },
         proxy: {
           '/api': {
-            target: 'http://localhost:5000/api',
+            target: 'http://localhost:5000/',
             secure: false,
             changeOrigin: true,
           }

@@ -18,24 +18,24 @@ const md = new MarkdownIt({
   },
 });
 
-class CodeExample extends BaseView {
+class MarkdownBlock extends BaseView {
   @property({ type: String })
-  private markup;
+  private content: string;
 
   render() {
     return html`
       <style>
-        .code-example {
+        .markdown-block {
           margin-top: 50px;
           font-size: 1rem;
         }
       </style>
 
-      <div class="code-example">
-        ${unsafeHTML(md.render(this.markup))}
+      <div class="markdown-block">
+        ${unsafeHTML(md.render(this.content))}
       </div>
     `;
   }
 }
 
-customElements.define('code-example', CodeExample);
+customElements.define('markdown-block', MarkdownBlock);

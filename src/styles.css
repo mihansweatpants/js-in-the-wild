@@ -80,3 +80,12 @@ header h1 {
   right: 7px;
   font-size: 32px;
 }
+
+nav {
+  font-size: 22px;
+}
+
+nav a {
+  padding: 20px 0;
+  margin-right: 40px;
+}

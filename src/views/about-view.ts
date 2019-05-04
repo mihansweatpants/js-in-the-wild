@@ -1,10 +1,17 @@
 import { html } from 'lit-element';
 import { BaseView } from './base-view';
 
+import '~/components/markdown-block';
+
+const ABOUT_MD = `
+# What is this
+### TODO: write about
+`;
+
 class AboutView extends BaseView {
   render() {
     return html`
-      <h1>Not found :(</h1>
+      <markdown-block class="about" content="${ABOUT_MD}" />
     `;
   }
 }

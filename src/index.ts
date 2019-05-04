@@ -17,7 +17,7 @@ function initRouter() {
       component: 'list-view',
     },
     {
-      path: '/about',
+      path: '/wtf',
       component: 'about-view',
       action: () => import('~/views/about-view'),
     },

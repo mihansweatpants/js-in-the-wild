@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.static('dist'));
 
-app.get('/gists', async (req, res) => {
+app.get('/api/gists', async (req, res) => {
   res.json(await fetchGists());
 });
 

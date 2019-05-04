@@ -7,7 +7,8 @@
     "prod": "npm run webpack -- --env.mode production --env.presets serviceworker",
     "dev": "npm run webpack-dev-server -- --env.mode development",
     "dev:sw": "npm run webpack-dev-server -- --env.mode development  --env.presets serviceworker",
-    "dev:server": "tsnd --transpileOnly --no-notify -O '{\"module\": \"commonjs\"}' server/server.ts"
+    "dev:server": "tsnd --transpileOnly --no-notify -O '{\"module\": \"commonjs\"}' server/server.ts",
+    "prod:server": "tsc server/server.ts --outDir server/build && node server/build/server.js"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",

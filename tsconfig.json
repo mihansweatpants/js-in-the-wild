@@ -17,7 +17,6 @@
     "experimentalDecorators": true,
     "paths": {
       "~/*": ["*"],
-      "#/*": ["modules/*"]
     }
   },
   "exclude": [

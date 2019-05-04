@@ -84,10 +84,9 @@ module.exports = ({ mode, presets }) => {
         },
         proxy: {
           '/api': {
-            target: 'http://localhost:5000',
+            target: 'http://localhost:5000/api',
             secure: false,
             changeOrigin: true,
-            pathRewrite: { '^/api' : '' },
           }
         }
       },

@@ -11,7 +11,7 @@ class ListView extends BaseView {
     if (this.list == null) {
       return html`
         <style>
-          .placeholder {
+          .loading {
             color: var(--yellow);
             font-size: 30px;
             white-space: nowrap;
@@ -22,7 +22,7 @@ class ListView extends BaseView {
             transform: translate(-50%, -50%);
           }
         </style>
-        <div class="placeholder">Fetching some code</div>
+        <div class="loading">Fetching some code</div>
       `;
     }
 

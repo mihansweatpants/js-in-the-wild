@@ -1,20 +1,8 @@
-# Boilerplate setup for web-component based app (using LitElement)
+# JS in the wild
 
-## TODO:
-  * <strike>Add typescript and linting</strike>
-  * i dunno
+This is a place where I collect pieces of JavaScript `<code/>`
+that I encounter out there 'in the wild' and find interesting. You get the idea.
 
-### Run dev server
-```
-yarn dev
-```
+Feel free to [send me](https://t.me/brsgn) some bits of JS that you think are interesting.
 
-### Run dev server and load service worker 
-```
-yarn dev:sw
-```
-
-### Build for production
-```
-yarn prod
-```
+<img src="misc/screen.png" height="600" style="text-align: left;" /> 
